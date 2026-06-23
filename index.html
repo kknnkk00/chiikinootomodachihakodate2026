@@ -24,27 +24,8 @@
     .marathon-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); color: #2a1a00; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 6px 14px; border-radius: 2px; margin-top: 20px; }
 
     /* STICKY UTILS BAR */
-    .utils-bar {
-      background: var(--navy);
-      padding: 14px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(91,158,201,0.2);
-    }
-    .util-card {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 10px;
-      padding: 10px 14px;
-      text-decoration: none;
-      color: var(--white);
-    }
+    .utils-bar { background: var(--navy); padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(91,158,201,0.2); }
+    .util-card { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 10px; padding: 10px 14px; text-decoration: none; color: var(--white); }
     .util-card .util-icon { font-size: 22px; flex-shrink: 0; }
     .util-card .util-body { flex: 1; }
     .util-card .util-title { font-size: 13px; font-weight: 700; }
@@ -52,33 +33,9 @@
     .util-card .util-btn { background: var(--gold); color: #2a1a00; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 4px; flex-shrink: 0; }
 
     /* TABS */
-    .tab-nav {
-      background: var(--light);
-      display: flex;
-      border-bottom: 2px solid rgba(91,158,201,0.15);
-      padding: 0 16px;
-      gap: 4px;
-    }
-    .tab-btn {
-      flex: 1;
-      padding: 12px 4px 10px;
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gray);
-      border-bottom: 3px solid transparent;
-      margin-bottom: -2px;
-      transition: all 0.15s;
-      text-align: center;
-      line-height: 1.3;
-    }
-    .tab-btn.active {
-      color: var(--navy);
-      border-bottom-color: var(--sky);
-    }
+    .tab-nav { background: var(--light); display: flex; border-bottom: 2px solid rgba(91,158,201,0.15); padding: 0 16px; gap: 4px; }
+    .tab-btn { flex: 1; padding: 12px 4px 10px; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 11px; font-weight: 700; color: var(--gray); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.15s; text-align: center; line-height: 1.3; }
+    .tab-btn.active { color: var(--navy); border-bottom-color: var(--sky); }
     .tab-btn .tab-day { font-family: 'Bebas Neue', sans-serif; font-size: 18px; display: block; line-height: 1; color: var(--sky); }
     .tab-btn.active .tab-day { color: var(--navy); }
 
@@ -155,7 +112,7 @@
       <div class="util-icon">🗺️</div>
       <div class="util-body">
         <div class="util-title">Google Map 共有リスト</div>
-        <div class="util-sub">ホテル・レストラン・観光スポット・マラソン後の銭湯を登録済み</div>
+        <div class="util-sub">ホテル・予約済みレストラン・おすすめ観光スポット・マラソン後に行ける函館市内の銭湯を登録済み</div>
       </div>
       <div class="util-btn">開く →</div>
     </a>
@@ -175,7 +132,7 @@
       <span class="tab-day">01</span>6/26（金）移動・夕食
     </button>
     <button class="tab-btn" onclick="showTab('day2', this)">
-      <span class="tab-day">02</span>6/27（土）観光
+      <span class="tab-day">02</span>6/27（土）観光・夕食
     </button>
     <button class="tab-btn" onclick="showTab('day3', this)">
       <span class="tab-day">03</span>6/28（日）マラソン・帰宅
@@ -200,6 +157,52 @@
         <div class="flight-card kishi">
           <div><div class="family-name">岸家</div><div class="family-sub">早め出発</div></div>
           <div class="flight-times"><strong>07:30</strong> 羽田発<br>函館着</div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <p class="section-label">🍜 Lunch候補 — おすすめラーメン</p>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <div class="hotel-name">函館麺厨房あじさい JR函館駅店</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町12-13 JR函館駅</div>
+          <div class="hotel-info-row">
+            <a href="https://maps.app.goo.gl/Hj9tEkceBP1GXv9y7?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
+            <a href="https://tabelog.com/hokkaido/A0105/A010501/1051994/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">函館麺屋 ゆうみん</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町19-1</div>
+          <div class="hotel-info-row">
+            <a href="https://maps.app.goo.gl/dN7bFK2NR3amwYMx5?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
+            <a href="https://tabelog.com/hokkaido/A0105/A010501/1008113/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">はこだて塩らーめん しなの</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町20-10</div>
+          <div class="hotel-info-row">
+            <a href="https://maps.app.goo.gl/ethhNSp1U5ZpnQq18?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
+            <a href="https://tabelog.com/hokkaido/A0105/A010501/1020986/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">滋養軒</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市松風町7-12</div>
+          <div class="hotel-info-row">
+            <a href="https://maps.app.goo.gl/RdFc3VuDPYXgKvhe6?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
+            <a href="https://tabelog.com/hokkaido/A0105/A010501/1007287/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+          </div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">ヤマザキ洋服店</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市末広町16-3</div>
+          <div class="hotel-info-row">
+            <a href="https://maps.app.goo.gl/aUt6xAVLEMXZvS7h8?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
+            <a href="https://tabelog.com/hokkaido/A0105/A010501/1081840/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+          </div>
         </div>
       </div>
 
@@ -251,6 +254,7 @@
         <div class="hotel-card">
           <div class="hotel-name">ラ・ジェント・ステイ函館駅前</div>
           <div class="hotel-families">鳥山家</div>
+          <a href="https://lagent.jp/hakodate-ekimae/" target="_blank" class="link-small">🔗 ホテル公式HP</a>
         </div>
       </div>
     </div>
@@ -258,53 +262,29 @@
     <!-- DAY 2 -->
     <div class="tab-panel" id="day2">
       <div class="note" style="margin-top:8px;">
-        📝 スケジュールは未定です。みんなで決めよう！<br>
+        📝 午前のスケジュールは未定です。みんなで決めよう！<br>
         函館山・金森赤レンガ倉庫・朝市・五稜郭など候補多数🗺️
       </div>
 
       <hr class="divider">
 
-      <p class="section-label">🍜 おすすめラーメン</p>
-      <div class="hotel-grid">
-        <div class="hotel-card">
-          <div class="hotel-name">函館麺厨房あじさい JR函館駅店</div>
-          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町12-13 JR函館駅</div>
-          <div class="hotel-info-row">
-            <a href="https://maps.app.goo.gl/Hj9tEkceBP1GXv9y7?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
-            <a href="https://tabelog.com/hokkaido/A0105/A010501/1051994/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
+      <p class="section-label">Dinner — 全員集合🎉</p>
+      <div class="dinner-card">
+        <div class="dinner-header">
+          <div class="dinner-icon">🍽️</div>
+          <div>
+            <div class="dinner-title">函館ダイニング雅家 ベイエリア店</div>
+            <div class="dinner-time">6/27（土）17:30〜（2時間、藤江家名義で予約済み）</div>
           </div>
         </div>
-        <div class="hotel-card">
-          <div class="hotel-name">函館麺屋 ゆうみん</div>
-          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町19-1</div>
-          <div class="hotel-info-row">
-            <a href="https://maps.app.goo.gl/dN7bFK2NR3amwYMx5?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
-            <a href="https://tabelog.com/hokkaido/A0105/A010501/1008113/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
-          </div>
+        <div class="dinner-detail">
+          📍 北海道函館市豊川町12-9 函館ベイ美食倶楽部<br>
+          📞 <a href="tel:0505592-1770">050-5592-1770</a><br>
+          🔗 <a href="https://tabelog.com/hokkaido/A0105/A010501/1076730/" target="_blank">食べログでチェック</a>
         </div>
-        <div class="hotel-card">
-          <div class="hotel-name">はこだて塩らーめん しなの</div>
-          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市若松町20-10</div>
-          <div class="hotel-info-row">
-            <a href="https://maps.app.goo.gl/ethhNSp1U5ZpnQq18?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
-            <a href="https://tabelog.com/hokkaido/A0105/A010501/1020986/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
-          </div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-name">滋養軒</div>
-          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市松風町7-12</div>
-          <div class="hotel-info-row">
-            <a href="https://maps.app.goo.gl/RdFc3VuDPYXgKvhe6?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
-            <a href="https://tabelog.com/hokkaido/A0105/A010501/1007287/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
-          </div>
-        </div>
-        <div class="hotel-card">
-          <div class="hotel-name">ヤマザキ洋服店</div>
-          <div class="hotel-families" style="color:var(--gray);font-weight:400;">北海道函館市末広町16-3</div>
-          <div class="hotel-info-row">
-            <a href="https://maps.app.goo.gl/aUt6xAVLEMXZvS7h8?g_st=ic" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">📍 Google Maps</a>
-            <a href="https://tabelog.com/hokkaido/A0105/A010501/1081840/" target="_blank" class="hotel-chip" style="text-decoration:none;color:var(--navy);">🍽 食べログ</a>
-          </div>
+        <div class="dinner-pax">
+          <span class="pax-chip">大人 7名</span>
+          <span class="pax-chip">子供 2名</span>
         </div>
       </div>
     </div>
