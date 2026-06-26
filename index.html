@@ -13,8 +13,6 @@
       --gold: #c9a84c; --white: #ffffff; --gray: #6b7a8d; --light: #f4f8fb;
     }
     body { font-family: 'Noto Sans JP', sans-serif; background: var(--navy); color: var(--navy); min-height: 100vh; }
-
-    /* HERO */
     .hero { background: linear-gradient(160deg, #0d1b35 0%, #1a3a5c 60%, #2d5a7a 100%); color: var(--white); padding: 60px 24px 32px; text-align: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200'%3E%3Cellipse cx='200' cy='180' rx='220' ry='80' fill='none' stroke='%235b9ec9' stroke-width='1' opacity='0.15'/%3E%3Cellipse cx='200' cy='180' rx='170' ry='60' fill='none' stroke='%235b9ec9' stroke-width='1' opacity='0.1'/%3E%3C/svg%3E") center bottom / cover no-repeat; pointer-events: none; }
     .hero-eyebrow { font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sky); margin-bottom: 12px; }
@@ -22,8 +20,6 @@
     .hero-title span { display: block; font-size: clamp(22px, 5vw, 40px); letter-spacing: 0.2em; color: var(--sky); margin-top: 8px; }
     .hero-dates { margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; }
     .marathon-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold); color: #2a1a00; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 6px 14px; border-radius: 2px; margin-top: 20px; }
-
-    /* STICKY UTILS BAR */
     .utils-bar { background: var(--navy); padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(91,158,201,0.2); }
     .util-card { display: flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.06); border-radius: 10px; padding: 10px 14px; text-decoration: none; color: var(--white); }
     .util-card .util-icon { font-size: 22px; flex-shrink: 0; }
@@ -31,23 +27,15 @@
     .util-card .util-title { font-size: 13px; font-weight: 700; }
     .util-card .util-sub { font-size: 11px; color: rgba(255,255,255,0.55); margin-top: 1px; }
     .util-card .util-btn { background: var(--gold); color: #2a1a00; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 4px; flex-shrink: 0; }
-
-    /* TABS */
     .tab-nav { background: var(--light); display: flex; border-bottom: 2px solid rgba(91,158,201,0.15); padding: 0 16px; gap: 4px; }
     .tab-btn { flex: 1; padding: 12px 4px 10px; border: none; background: none; cursor: pointer; font-family: inherit; font-size: 11px; font-weight: 700; color: var(--gray); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.15s; text-align: center; line-height: 1.3; }
     .tab-btn.active { color: var(--navy); border-bottom-color: var(--sky); }
     .tab-btn .tab-day { font-family: 'Bebas Neue', sans-serif; font-size: 18px; display: block; line-height: 1; color: var(--sky); }
     .tab-btn.active .tab-day { color: var(--navy); }
-
-    /* CONTENT */
     .content { background: var(--light); padding: 24px 16px 60px; min-height: 60vh; }
     .tab-panel { display: none; max-width: 680px; margin: 0 auto; }
     .tab-panel.active { display: block; }
-
-    /* SECTION */
     .section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--sky); font-weight: 700; margin-bottom: 12px; }
-
-    /* FLIGHT CARDS */
     .flight-grid { display: grid; gap: 10px; margin-bottom: 24px; }
     .flight-card { background: var(--white); border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-left: 4px solid var(--sky); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .flight-card.kishi { border-left-color: var(--gold); }
@@ -55,8 +43,6 @@
     .family-sub { font-size: 11px; color: var(--gray); margin-top: 2px; }
     .flight-times { text-align: right; font-size: 12px; color: var(--gray); line-height: 1.8; }
     .flight-times strong { color: var(--navy); font-size: 13px; }
-
-    /* DINNER */
     .dinner-card { background: var(--white); border-radius: 14px; padding: 20px 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); margin-bottom: 24px; }
     .dinner-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
     .dinner-icon { font-size: 32px; }
@@ -66,8 +52,6 @@
     .dinner-detail a { color: var(--sky); text-decoration: none; border-bottom: 1px solid var(--sky); }
     .dinner-pax { display: flex; gap: 8px; margin-top: 12px; }
     .pax-chip { background: #fff4d6; color: #7a5500; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 6px; }
-
-    /* HOTEL */
     .hotel-grid { display: grid; gap: 12px; margin-bottom: 24px; }
     .hotel-card { background: var(--white); border-radius: 12px; padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .hotel-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
@@ -75,8 +59,6 @@
     .hotel-info-row { display: flex; flex-wrap: wrap; gap: 8px; }
     .hotel-chip { background: var(--ice); color: var(--navy); font-size: 11px; padding: 4px 10px; border-radius: 6px; }
     .link-small { display: inline-block; margin-top: 10px; font-size: 11px; color: var(--sky); border-bottom: 1px solid var(--sky); text-decoration: none; }
-
-    /* MARATHON */
     .marathon-card { background: linear-gradient(135deg, var(--navy) 0%, #2d5a7a 100%); color: var(--white); border-radius: 14px; padding: 24px 20px; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
     .marathon-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
     .marathon-detail h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
@@ -85,20 +67,13 @@
     .runner-chip { background: rgba(255,255,255,0.15); font-size: 12px; padding: 4px 10px; border-radius: 20px; color: var(--white); }
     .marathon-img { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 24px; }
     .marathon-img img { width: 100%; display: block; }
-
-    /* NOTE */
     .note { background: #fff8e6; border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 12px 14px; font-size: 12px; color: #5a3e00; line-height: 1.7; margin-bottom: 24px; }
-
-    /* DIVIDER */
     .divider { border: none; border-top: 1px solid rgba(91,158,201,0.2); margin: 0 0 24px; }
-
-    /* FOOTER */
     .footer { text-align: center; padding: 16px; font-size: 12px; color: var(--gray); background: var(--light); }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
   <header class="hero">
     <p class="hero-eyebrow">2026 Summer Trip</p>
     <h1 class="hero-title">函館<span>HAKODATE</span></h1>
@@ -106,9 +81,8 @@
     <div class="marathon-badge">🏃 函館マラソン当日含む</div>
   </header>
 
-  <!-- STICKY UTILS BAR -->
   <div class="utils-bar">
-    <a href="https://maps.app.goo.gl/C6QyL3Pv4TBh34CG7?g_st=i" target="_blank" class="util-card">
+    <a href="https://www.google.com/maps/placelists/" target="_blank" class="util-card">
       <div class="util-icon">🗺️</div>
       <div class="util-body">
         <div class="util-title">Google Map 共有リスト</div>
@@ -126,7 +100,6 @@
     </a>
   </div>
 
-  <!-- TABS -->
   <div class="tab-nav">
     <button class="tab-btn active" onclick="showTab('day1', this)">
       <span class="tab-day">01</span>6/26（金）移動・夕食
@@ -143,7 +116,6 @@
 
     <!-- DAY 1 -->
     <div class="tab-panel active" id="day1">
-
       <p class="section-label" style="margin-top:8px;">Flight — 羽田 → 函館</p>
       <div class="flight-grid">
         <div class="flight-card">
@@ -261,9 +233,58 @@
 
     <!-- DAY 2 -->
     <div class="tab-panel" id="day2">
-      <div class="note" style="margin-top:8px;">
-        📝 午前のスケジュールは未定です。みんなで決めよう！<br>
-        函館山・金森赤レンガ倉庫・朝市・五稜郭など候補多数🗺️
+      
+      <p class="section-label" style="margin-top:8px;">📍 集合・午前</p>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <div class="hotel-name">🏨 OMO5函館 前に集合</div>
+          <div class="hotel-families" style="color:var(--gold);font-weight:700;">10:20 集合</div>
+          <div class="hotel-info-row">
+            <span class="hotel-chip">OMO周遊バス 10:30 予約済み</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <p class="section-label">🍔 Lunch — ラッキーピエロ</p>
+      <div class="dinner-card">
+        <div class="dinner-header">
+          <div class="dinner-icon">🍔</div>
+          <div>
+            <div class="dinner-title">ラッキーピエロ 五稜郭公園前店</div>
+            <div class="dinner-time">ランチ予定</div>
+          </div>
+        </div>
+        <div class="dinner-detail">
+          📍 北海道函館市五稜郭町30-14<br>
+          📞 <a href="tel:0138-55-4424">0138-55-4424</a><br>
+          📍 <a href="https://maps.app.goo.gl/n8PK4FVUbNPEJjuv8?g_st=ic" target="_blank">Google Maps</a>　
+          🔗 <a href="https://tabelog.com/hokkaido/A0105/A010501/1000774/" target="_blank">食べログ</a>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <p class="section-label">🏯 午後 — 五稜郭 & 六花亭カフェ</p>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <div class="hotel-name">🏯 五稜郭</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">函館を代表する星形の城郭跡</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">🧁 六花亭カフェ</div>
+          <div class="hotel-families" style="color:var(--gray);font-weight:400;">五稜郭周辺で立ち寄り予定</div>
+        </div>
+        <div class="hotel-card">
+          <div class="hotel-name">🏃 陸上競技場へ移動（夫3名）</div>
+          <div class="hotel-families" style="color:var(--gold);font-weight:700;">五稜郭の帰りにマラソン受付・チェックイン</div>
+          <div class="hotel-info-row">
+            <span class="hotel-chip">長野さん（夫）</span>
+            <span class="hotel-chip">鳥山さん（夫）</span>
+            <span class="hotel-chip">岸さん（夫）</span>
+          </div>
+        </div>
       </div>
 
       <hr class="divider">
@@ -274,7 +295,7 @@
           <div class="dinner-icon">🍽️</div>
           <div>
             <div class="dinner-title">函館ダイニング雅家 ベイエリア店</div>
-            <div class="dinner-time">6/27（土）17:30〜（2時間、岸家名義で予約済み）</div>
+            <div class="dinner-time">6/27（土）17:30〜（2時間、藤江家名義で予約済み）</div>
           </div>
         </div>
         <div class="dinner-detail">
@@ -287,11 +308,11 @@
           <span class="pax-chip">子供 2名</span>
         </div>
       </div>
+
     </div>
 
     <!-- DAY 3 -->
     <div class="tab-panel" id="day3">
-
       <div class="marathon-card" style="margin-top:8px;">
         <div class="marathon-icon">🏃</div>
         <div class="marathon-detail">
